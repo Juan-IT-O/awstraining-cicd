@@ -1,0 +1,24 @@
+  name: Greet people Workflow
+  run-name: Greeting everyone from the list
+
+  on:
+    workflow_dispatch: {}
+
+  jobs:
+    greet-everyone: 
+      runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          prople:
+            - Bozenka
+            - Kawunia
+            - Pyszna
+            - Z
+            - Rana
+
+      steps:
+        - name: call custom Action
+          uses: Juan-IT-O/hello-world-action@v1
+          with:
+            name: ${{matrix.people}}
+  
