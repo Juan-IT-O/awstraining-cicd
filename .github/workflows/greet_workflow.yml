@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Greet
         id: greet
-        uses: Juan-IT-O/october_cicd_shared_actions@v1.0.0
+        uses: Juan-IT-O/october_cicd_shared_actions@main
         with:
           name: ${{ matrix.name }}
       - name: Print action call output
