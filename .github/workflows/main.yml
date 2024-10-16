@@ -22,6 +22,7 @@ jobs:
           echo "Hello ${{ inputs.name}}! Welcome in this step!"
           
   print_last_name:
+    needs: print_hello_world
     runs-on: ubuntu-latest
     steps:
       - name: Print last name
